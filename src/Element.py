@@ -1,5 +1,5 @@
 class Element(object):
-    def __init__(self, name, symbol, atomic_number, group, period):
+    def __init__(self, name, symbol, atomic_number : int, group : int, period : int):
         self.unique_id = Element.generateID()
         self.name = name
         self.symbol = symbol

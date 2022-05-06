@@ -4,6 +4,7 @@ from src import Element
 class TestElement(unittest.TestCase):
     def test_CreateElement(self):
         element = Element.Element("Hidrogênio", "H", 1, 1, 1)
+        del element
 
     def test_ElementAttribute(self):
         element = Element.Element("Lítio", "Li", 3, 1, 2)
@@ -13,6 +14,7 @@ class TestElement(unittest.TestCase):
         self.assertEqual(element.atomic_number, 3)
         self.assertEqual(element.group, 1)
         self.assertEqual(element.period, 2)
+        del element
 
 if __name__ == '__main__':
     unittest.main()
