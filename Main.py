@@ -46,7 +46,61 @@ class Game():
 
     def loadGame(self):
         elementPackage = ElementPackage.ElementPackage()
-        elementPackage.insertElement(Element.Element("Hidrogênio", "H", 1, 1, 1))
+        
+        # 1º Grupo
+        elementPackage.insertElement(Element.Element("Hidrogênio",  "H",    1,  1, 1))
+        elementPackage.insertElement(Element.Element("Lítio",       "Li",   3,  1, 2))
+        elementPackage.insertElement(Element.Element("Sódio",       "Na",   11, 1, 3))
+        elementPackage.insertElement(Element.Element("Potássio",    "K",    19,  1, 4))
+        elementPackage.insertElement(Element.Element("Rubídio",     "Rb",   37,  1, 5))
+        elementPackage.insertElement(Element.Element("Césio",       "Cs",   55,  1, 6))
+        elementPackage.insertElement(Element.Element("Frâncio",     "Fr",   87,  1, 7))
+
+        # 2º Grupo
+        elementPackage.insertElement(Element.Element("Bérilio",     "Be",   4,  2, 2))
+        elementPackage.insertElement(Element.Element("Magnésio",    "Mg",   12, 2, 3))
+        elementPackage.insertElement(Element.Element("Cásio",       "Ca",   20, 2, 4))
+        elementPackage.insertElement(Element.Element("Estrôncio",   "Sr",   38, 2, 5))
+        elementPackage.insertElement(Element.Element("Bário",       "Ba",   56, 2, 6))
+        elementPackage.insertElement(Element.Element("Rádio",       "Ra",   88, 2, 7))
+
+        # 3º Grupo
+        elementPackage.insertElement(Element.Element("Escândio",    "Sc",   21, 3, 4))
+        elementPackage.insertElement(Element.Element("Ítrio",       "Y",    39, 3, 5))
+
+        # 3º Grupo Lantanídeos
+        elementPackage.insertElement(Element.Element("Lantânio",    "La",   57, 3, 6))
+        elementPackage.insertElement(Element.Element("Cério",       "Ce",   58, 3, 6))
+        elementPackage.insertElement(Element.Element("Praseodímio", "Pr",   59, 3, 6))
+        elementPackage.insertElement(Element.Element("Neodímio",    "Nd",   60, 3, 6))
+        elementPackage.insertElement(Element.Element("Promécio",    "Pm",   61, 3, 6))
+        elementPackage.insertElement(Element.Element("Samário",     "Sm",   62, 3, 6))
+        elementPackage.insertElement(Element.Element("Európio",     "Eu",   63, 3, 6))
+        elementPackage.insertElement(Element.Element("Gadolídio",   "Gd",   64, 3, 6))
+        elementPackage.insertElement(Element.Element("Térbio",      "Tb",   65, 3, 6))
+        elementPackage.insertElement(Element.Element("Disprósio",   "Dy",   66, 3, 6))
+        elementPackage.insertElement(Element.Element("Hólmio",      "Ho",   67, 3, 6))
+        elementPackage.insertElement(Element.Element("Érbio",       "Er",   68, 3, 6))
+        elementPackage.insertElement(Element.Element("Túlio",       "Tm",   69, 3, 6))
+        elementPackage.insertElement(Element.Element("Itérbio",     "Yb",   70, 3, 6))
+        elementPackage.insertElement(Element.Element("Lutécio",     "Lu",   71, 3, 6))
+
+        # 3º Grupo Actinídeos
+        elementPackage.insertElement(Element.Element("Actínio",     "Ac",   89, 3, 7))
+        elementPackage.insertElement(Element.Element("Tório",       "Th",   90, 3, 7))
+        elementPackage.insertElement(Element.Element("Protáctinio", "Pa",   91, 3, 7))
+        elementPackage.insertElement(Element.Element("Urânio",      "U",    92, 3, 7))
+        elementPackage.insertElement(Element.Element("Netúnio",     "Np",   93, 3, 7))
+        elementPackage.insertElement(Element.Element("Plutônio",    "Pu",   94, 3, 7))
+        elementPackage.insertElement(Element.Element("Amerício",    "Am",   95, 3, 7))
+        elementPackage.insertElement(Element.Element("Cúrio",       "Cm",   96, 3, 7))
+        elementPackage.insertElement(Element.Element("Berquélio",   "Bk",   97, 3, 7))
+        elementPackage.insertElement(Element.Element("Califórnio",  "Cf",   98, 3, 7))
+        elementPackage.insertElement(Element.Element("Einsténio",   "Es",   99, 3, 7))
+        elementPackage.insertElement(Element.Element("Férmio",      "Fm",   100, 3, 7))
+        elementPackage.insertElement(Element.Element("Mendelévio",  "Md",   101, 3, 7))
+        elementPackage.insertElement(Element.Element("Nobélio",     "No",   102, 3, 7))
+        elementPackage.insertElement(Element.Element("Laurêncio",   "Lr",   103, 3, 7))
 
     # função principal do jogo
     def gameMain(self):
