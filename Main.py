@@ -102,7 +102,8 @@ class Game():
         elementPackage.insertElement(Element.Element("Nobélio",     "No",   102, 3, 7))
         elementPackage.insertElement(Element.Element("Laurêncio",   "Lr",   103, 3, 7))
 
-        self.container = ContainerElement.Container(10, self.screenSize[1] - 120 - 10, 120, self.screenSize[0] - 20, (127, 127, 127))
+        self.containerSelection = ContainerElement.Container(10, self.screenSize[1] - 200 - 10, 200, self.screenSize[0] - 20, (127, 127, 127))
+
 
     # função principal do jogo
     def gameMain(self):
@@ -141,14 +142,14 @@ class Game():
             Função responsável por atualizar a lógica do jogo
             deltaTime -> váriaveis que guarda o tempo que se passou entre dois frames
         '''
-        self.container.update(deltaTime)
+        self.containerSelection.update(deltaTime)
 
     # função de renderização
     def gameRender(self):
         '''
             Função responsável por desenhar na tela do jogo
         '''
-        self.container.render(self.screen)
+        self.containerSelection.render(self.screen)
 
 game = Game((800, 600), title='Game')
 game.gameMain()
