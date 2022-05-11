@@ -5,7 +5,7 @@ class GameInterface(object):
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
-    def update(self) -> None:
+    def update(self, deltaTime) -> None:
         pass
 
     @abc.abstractmethod
