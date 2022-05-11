@@ -2,6 +2,10 @@ import pygame
 import numpy as np
 import os
 
+from src import Element
+from src import ElementPackage
+from src import ContainerElement
+
 class Game():
     '''
         Classe responsável por gerenciar o jogo
@@ -25,6 +29,7 @@ class Game():
 
         # inicializa o game
         self.initGame()
+        self.loadGame()
 
     def initGame(self):
         '''
@@ -38,6 +43,10 @@ class Game():
             pygame.display.set_icon(self.icon)
 
         self.gameClock = pygame.time.Clock()
+
+    def loadGame(self):
+        elementPackage = ElementPackage.ElementPackage()
+        elementPackage.insertElement(Element.Element("Hidrogênio", "H", 1, 1, 1))
 
     # função principal do jogo
     def gameMain(self):

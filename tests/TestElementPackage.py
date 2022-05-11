@@ -1,4 +1,6 @@
 import unittest
+
+from src import Element
 from src import ElementPackage
 
 class TestElement(unittest.TestCase):
@@ -8,7 +10,7 @@ class TestElement(unittest.TestCase):
 
     def test_InsertElementPackage_B(self):
         elementPackage = ElementPackage.ElementPackage()
-        element = ElementPackage.Element.Element("Lítio", "Li", 3, 1, 2)
+        element = Element.Element("Lítio", "Li", 3, 1, 2)
         elementPackage.insertElement(element)
         del elementPackage
 
