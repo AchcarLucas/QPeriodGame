@@ -1,6 +1,6 @@
 from src import Element
 
-class ElementPackage(object):
+class ElementPackage():
     def __init__(self):
         self._elements = []
 

@@ -28,8 +28,17 @@
     <Compile Include="src\ElementPackage.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\GameInterface.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\Main.py" />
+    <Compile Include="src\ContainerElement.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="src\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\TestContainerElement.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="tests\TestElement.py">
