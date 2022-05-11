@@ -5,6 +5,7 @@ import os
 from src import Element
 from src import ElementPackage
 from src import Container
+from src import ContainerElement
 
 class Game():
     '''
@@ -103,7 +104,7 @@ class Game():
         elementPackage.insertElement(Element.Element("Laurêncio",   "Lr",   103, 3, 7))
 
         self.containerSelection = Container.Container(10, self.screenSize[1] - 200 - 10, 200, self.screenSize[0] - 20, (127, 127, 127))
-
+        self.containerElement = ContainerElement.ContainerElement(self.containerSelection)
 
     # função principal do jogo
     def gameMain(self):
@@ -142,6 +143,7 @@ class Game():
             Função responsável por atualizar a lógica do jogo
             deltaTime -> váriaveis que guarda o tempo que se passou entre dois frames
         '''
+        self.containerElement.update(deltaTime)
         self.containerSelection.update(deltaTime)
 
     # função de renderização
@@ -149,6 +151,7 @@ class Game():
         '''
             Função responsável por desenhar na tela do jogo
         '''
+        self.containerElement.render(self.screen)
         self.containerSelection.render(self.screen)
 
 game = Game((800, 600), title='Game')
