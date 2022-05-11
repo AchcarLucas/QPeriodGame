@@ -7,6 +7,13 @@ class ElementPackage():
     def __del__(self):
         self.removeAllElement()
 
+    def getElementBySymbol(self, symbol) -> Element.Element:
+        for element in self._elements:
+            if(element.symbol == symbol):
+                return element
+
+        return None
+
     def insertElement(self, element : Element.Element):
         self._elements.append(element)
 
