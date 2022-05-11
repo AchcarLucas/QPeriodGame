@@ -4,7 +4,7 @@ import os
 
 from src import Element
 from src import ElementPackage
-from src import ContainerElement
+from src import Container
 
 class Game():
     '''
@@ -102,7 +102,7 @@ class Game():
         elementPackage.insertElement(Element.Element("Nobélio",     "No",   102, 3, 7))
         elementPackage.insertElement(Element.Element("Laurêncio",   "Lr",   103, 3, 7))
 
-        self.containerSelection = ContainerElement.Container(10, self.screenSize[1] - 200 - 10, 200, self.screenSize[0] - 20, (127, 127, 127))
+        self.containerSelection = Container.Container(10, self.screenSize[1] - 200 - 10, 200, self.screenSize[0] - 20, (127, 127, 127))
 
 
     # função principal do jogo

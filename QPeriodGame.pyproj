@@ -4,8 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>35ba23c0-cb19-4466-941d-4ef0aaeeb15e</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>Main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -33,13 +32,13 @@
     <Compile Include="src\GameInterface.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="src\ContainerElement.py">
+    <Compile Include="src\Container.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\__init__.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="tests\TestContainerElement.py">
+    <Compile Include="tests\TestContainer.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="tests\TestElement.py">
