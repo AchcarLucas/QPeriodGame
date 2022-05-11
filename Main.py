@@ -102,7 +102,7 @@ class Game():
         elementPackage.insertElement(Element.Element("Nobélio",     "No",   102, 3, 7))
         elementPackage.insertElement(Element.Element("Laurêncio",   "Lr",   103, 3, 7))
 
-        self.container = ContainerElement.Container(10, 10, 100, 200, (255, 255, 255))
+        self.container = ContainerElement.Container(10, self.screenSize[1] - 120 - 10, 120, self.screenSize[0] - 20, (127, 127, 127))
 
     # função principal do jogo
     def gameMain(self):
@@ -111,7 +111,7 @@ class Game():
         '''
         while self.gameRunning:
             deltaTime = self.gameClock.tick(self.fps)
-            self.screen.fill((0, 0, 0))
+            self.screen.fill((50, 50, 50))
 
             for event in pygame.event.get():
                 self.gameEvent(event)
