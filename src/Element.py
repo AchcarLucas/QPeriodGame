@@ -3,6 +3,7 @@ import pygame
 from src import ElementState
 from src import GameConstants
 from src import GameInterface
+from src import GameFont
 
 class Element(GameInterface.GameInterface):
     def __init__(self, name, symbol, atomic_number : int, group : int, period : int):
@@ -31,8 +32,13 @@ class Element(GameInterface.GameInterface):
         return self.__surfaceElement.get_rect()
 
     def __createSurfaceElement(self):
-        self.__surfaceElement = GameInterface.Surface((60, 75))
-        pygame.draw.rect(self.__surfaceElement, (255, 0, 0), (0, 0, 60, 75))
+        HEIGHT_ELEMENT = int(GameConstants.GameConstants.HEIGHT_ELEMENT)
+        WIDTH_ELEMENT = int(GameConstants.GameConstants.WIDTH_ELEMENT)
+
+        self.__surfaceElement = GameInterface.Surface((HEIGHT_ELEMENT, WIDTH_ELEMENT))
+        pygame.draw.rect(self.__surfaceElement, (255, 0, 0), (0, 0, HEIGHT_ELEMENT, WIDTH_ELEMENT))
+        text_symbol_surface = GameFont.GameFont.arial_30.render(self.symbol, True, (255, 255, 255))
+        self.__surfaceElement.blit(text_symbol_surface, ((HEIGHT_ELEMENT / 2) - text_symbol_surface.get_height() / 2, (WIDTH_ELEMENT / 2) - text_symbol_surface.get_width() / 2))
 
     def setElementX(self, x):
         self.__x = x

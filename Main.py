@@ -7,6 +7,7 @@ from src import ElementPackage
 from src import Container
 from src import ContainerElement
 from src import GameConstants
+from src import GameFont
 
 class Game():
     '''
@@ -40,6 +41,8 @@ class Game():
         '''
         self.screen = pygame.display.set_mode(self.screenSize)
         pygame.display.set_caption(self.title)
+
+        GameFont.GameFont.initFont()
 
         if(self.icon != None):
             pygame.display.set_icon(self.icon)
