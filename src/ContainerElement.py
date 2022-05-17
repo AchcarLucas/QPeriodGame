@@ -9,7 +9,7 @@ class ContainerElement(GameInterface.GameInterface):
         self.__container = container
         self.elementPackage = None
 
-    def setElementPackage(elementPackage : ElementPackage.ElementPackage):
+    def setElementPackage(self, elementPackage : ElementPackage.ElementPackage):
         self.elementPackage = elementPackage
 
     def update(self, deltaTime):
