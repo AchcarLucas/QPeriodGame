@@ -14,7 +14,7 @@ class Element(GameInterface.GameInterface):
         self.period = period
 
         self.__state = ElementState.ElementState.ATTEMPT
-        self.__attempt = GameConstants.GameConstants.MAX_ATTEMPT
+        self.__attempt = int(GameConstants.GameConstants.MAX_ATTEMPT)
 
         self.__x = 0
         self.__y = 0
@@ -27,9 +27,22 @@ class Element(GameInterface.GameInterface):
     def getElementAttempt(self):
         return self.__attempt
 
+    def getRect(self):
+        return self.__surfaceElement.get_rect()
+
     def __createSurfaceElement(self):
         self.__surfaceElement = GameInterface.Surface((60, 75))
         pygame.draw.rect(self.__surfaceElement, (255, 0, 0), (0, 0, 60, 75))
+
+    def setElementX(self, x):
+        self.__x = x
+    
+    def setElementY(self, y):
+        self.__x = y
+
+    def setElementXY(self, x, y):
+        self.__x = x
+        self.__y = y
 
     def update(self, deltaTime):
         pass

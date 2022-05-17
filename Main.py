@@ -6,6 +6,7 @@ from src import Element
 from src import ElementPackage
 from src import Container
 from src import ContainerElement
+from src import GameConstants
 
 class Game():
     '''
@@ -103,7 +104,10 @@ class Game():
         elementPackage.insertElement(Element.Element("Nobélio",     "No",   102, 3, 7))
         elementPackage.insertElement(Element.Element("Laurêncio",   "Lr",   103, 3, 7))
 
-        self.container = Container.Container(10, self.screenSize[1] - 200 - 10, 200, self.screenSize[0] - 20, (127, 127, 127))
+        HEIGHT_ELEMENT = int(GameConstants.GameConstants.HEIGHT_ELEMENT)
+        WIDTH_ELEMENT = int(GameConstants.GameConstants.WIDTH_ELEMENT)
+
+        self.container = Container.Container(40, self.screenSize[1] - (20 + HEIGHT_ELEMENT) - 10, (20 + HEIGHT_ELEMENT), self.screenSize[0] - 40 * 2, (127, 127, 127))
         self.containerElement = ContainerElement.ContainerElement(self.container)
         self.containerElement.setElementPackage(elementPackage)
 
