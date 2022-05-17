@@ -105,6 +105,7 @@ class Game():
 
         self.container = Container.Container(10, self.screenSize[1] - 200 - 10, 200, self.screenSize[0] - 20, (127, 127, 127))
         self.containerElement = ContainerElement.ContainerElement(self.container)
+        self.containerElement.setElementPackage(elementPackage)
 
     # função principal do jogo
     def gameMain(self):

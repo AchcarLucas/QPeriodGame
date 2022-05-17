@@ -17,6 +17,9 @@ class ContainerElement(GameInterface.GameInterface):
 
     def render(self, screen : GameInterface.Surface):
         surfaceContainer = self.__container.getSurfaceContainer()
-        pygame.draw.rect(surfaceContainer, (255, 0, 0), (10, 10, 50, 50))
+        if(self.elementPackage != None):
+            elements = self.elementPackage.getElements()
+            for element in elements:
+                element.render(surfaceContainer)
 
 
