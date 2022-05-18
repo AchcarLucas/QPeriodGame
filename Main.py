@@ -110,7 +110,7 @@ class Game():
         HEIGHT_ELEMENT = int(GameConstants.GameConstants.HEIGHT_ELEMENT)
         WIDTH_ELEMENT = int(GameConstants.GameConstants.WIDTH_ELEMENT)
 
-        self.container = Container.Container(40, self.screenSize[1] - (20 + HEIGHT_ELEMENT) - 10, (20 + HEIGHT_ELEMENT), self.screenSize[0] - 40 * 2, (127, 127, 127))
+        self.container = Container.Container(40, self.screenSize[1] - (20 + HEIGHT_ELEMENT) - 10, (20 + WIDTH_ELEMENT), self.screenSize[0] - 40 * 2, (127, 127, 127))
         self.containerElement = ContainerElement.ContainerElement(self.container)
         self.containerElement.setElementPackage(elementPackage)
 
