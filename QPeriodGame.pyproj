@@ -26,12 +26,16 @@
     <Compile Include="src\ContainerElement.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\ContainerTable.py" />
     <Compile Include="src\Element.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="src\ElementPackage.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="src\ElementState.py" />
+    <Compile Include="src\GameConstants.py" />
+    <Compile Include="src\GameFont.py" />
     <Compile Include="src\GameInterface.py">
       <SubType>Code</SubType>
     </Compile>
