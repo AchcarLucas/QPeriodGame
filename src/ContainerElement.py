@@ -30,7 +30,6 @@ class ContainerElement(GameInterface.GameInterface):
             element.setElementXY(x - self.__offset_x, y + self.__offset_y)
             x = x + element.getRect().width + between_element_x
 
-
         # limita os elementos no container  
         final_space_x = x - self.__container.getContainerWidth()
 
