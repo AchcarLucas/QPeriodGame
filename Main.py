@@ -110,8 +110,9 @@ class Game():
         HEIGHT_ELEMENT = int(GameConstants.GameConstants.HEIGHT_ELEMENT)
         WIDTH_ELEMENT = int(GameConstants.GameConstants.WIDTH_ELEMENT)
 
-        self.container = Container.Container(40, self.screenSize[1] - (20 + HEIGHT_ELEMENT) - 10, (20 + WIDTH_ELEMENT), self.screenSize[0] - 40 * 2, (127, 127, 127))
-        self.containerElement = ContainerElement.ContainerElement(self.container)
+        self.containerToSelection = Container.Container(40, self.screenSize[1] - (20 + HEIGHT_ELEMENT) - 10, (20 + WIDTH_ELEMENT), self.screenSize[0] - 40 * 2, (127, 127, 127))
+        
+        self.containerElement = ContainerElement.ContainerElement(self.containerToSelection)
         self.containerElement.setElementPackage(elementPackage)
 
     # função principal do jogo
@@ -152,7 +153,7 @@ class Game():
             deltaTime -> váriaveis que guarda o tempo que se passou entre dois frames
         '''
         self.containerElement.update(deltaTime)
-        self.container.update(deltaTime)
+        self.containerToSelection.update(deltaTime)
 
     # função de renderização
     def gameRender(self):
@@ -160,7 +161,7 @@ class Game():
             Função responsável por desenhar na tela do jogo
         '''
         self.containerElement.render(self.screen)
-        self.container.render(self.screen)
+        self.containerToSelection.render(self.screen)
 
 game = Game((800, 600), title='Game')
 game.gameMain()
